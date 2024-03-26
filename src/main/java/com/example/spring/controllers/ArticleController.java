@@ -1,6 +1,5 @@
 package com.example.spring.controllers;
 
-import jakarta.persistence.GeneratedValue;
 import com.example.spring.dto.ArticleDto;
 import com.example.spring.dto.ArticleForm;
 import com.example.spring.services.ArticleService;
