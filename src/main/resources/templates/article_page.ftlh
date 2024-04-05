@@ -9,7 +9,7 @@
 </head>
 <body>
 <div>
-    <form action="/users/{user-id}/article" method="post">
+    <form action="/users/${.vars['user-id']}/article" method="post">
         <input name="name" type="text" placeholder="name">
         <input name="type" type="text" placeholder="type">
         <input name="text" type="text" placeholder="text">

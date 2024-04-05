@@ -21,12 +21,23 @@ public class ArticleDto {
 
 
     public  static ArticleDto from(Article article) {
-        return ArticleDto.builder()
-                .id(article.getArticleId())
-                .text(article.getText())
-                .authorName(article.getAuthor().getEmail())
-                .likeCount(article.getLikes().size())
-                .build();
+        if (article.getLikes() == null) {
+            return ArticleDto.builder()
+                    .id(article.getArticleId())
+                    .text(article.getText())
+                    .authorName(article.getAuthor().getEmail())
+                    .likeCount(0)
+                    .build();
+
+        } else {
+            return ArticleDto.builder()
+                    .id(article.getArticleId())
+                    .text(article.getText())
+                    .authorName(article.getAuthor().getEmail())
+                    .likeCount(article.getLikes().size())
+                    .build();
+        }
+
     }
 
     public static List<ArticleDto> articleList(List<Article> articles) {
