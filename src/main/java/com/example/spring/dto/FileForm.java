@@ -6,13 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserForm {
-    private String email;
-    private String password;
-    private String firstname;
-    private String lastname;
-    private String phone;
+@Builder
+public class FileForm {
+    private String description;
 }

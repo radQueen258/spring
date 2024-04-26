@@ -17,10 +17,10 @@ public class ArticleController {
 
     @PostMapping("/users/{user-id}/article")
     @ResponseBody
-    public String addArticle(@PathVariable("user-id") Long id,
+    public ArticleDto addArticle(@PathVariable("user-id") Long id,
                                  @RequestBody ArticleForm articleForm) {
-        articleService.addArticle(id, articleForm);
-        return  "redirect:/users/{user-id}/article";
+
+        return articleService.addArticle(id, articleForm);
     }
 
     @GetMapping("/users/{user-id}/article")
