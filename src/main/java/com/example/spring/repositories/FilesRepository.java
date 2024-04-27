@@ -2,6 +2,8 @@ package com.example.spring.repositories;
 
 import com.example.spring.models.FileInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 
